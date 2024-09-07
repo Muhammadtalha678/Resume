@@ -13,18 +13,16 @@
 // hide show content
 const toggleButtons = document.querySelectorAll('.hide-button');
 for (const toggleButton of toggleButtons) {
-    toggleButton.addEventListener('click', function (event) {
-        const target = event.target; // Assert event.target as HTMLElement
-        const parentElement = target.parentElement; // Access parentElement
-        const sibling = parentElement.nextElementSibling; // Access nextElementSibling
-        if (window.getComputedStyle(sibling).display === 'block') {
-            // console.log(window.getComputedStyle(sibling).display);
-            sibling.style.display = 'none';
-            target.innerText = 'Show';
+    toggleButton.addEventListener('click', function () {
+        const parentElement = this.parentElement;
+        const nextSiblingElement = parentElement.nextElementSibling;
+        if (window.getComputedStyle(nextSiblingElement).display === 'block') {
+            nextSiblingElement.style.display = 'none';
+            this.innerText = 'Show';
         }
         else {
-            sibling.style.display = 'block';
-            target.innerText = 'Hide';
+            nextSiblingElement.style.display = 'block';
+            this.innerText = 'Hide';
         }
     });
 }

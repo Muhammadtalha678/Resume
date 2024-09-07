@@ -17,21 +17,20 @@
 const toggleButtons = document.querySelectorAll('.hide-button') as NodeListOf<HTMLButtonElement>
  
 for (const toggleButton of toggleButtons) {
-    toggleButton.addEventListener('click', function (event) {
-      const target = event.target as HTMLButtonElement; // Assert event.target as HTMLElement
-        const parentElement = target.parentElement as HTMLHeadingElement; // Access parentElement
-        const sibling = parentElement.nextElementSibling as HTMLParagraphElement; // Access nextElementSibling
-        
-        if (window.getComputedStyle(sibling).display === 'block') {
-            // console.log(window.getComputedStyle(sibling).display);
-            sibling.style.display = 'none'
-            target.innerText = 'Show'
+    toggleButton.addEventListener('click', function () {
+        const parentElement = this.parentElement as HTMLHeadingElement
+        const nextSiblingElement = parentElement.nextElementSibling as HTMLHeadingElement
             
-        } else {
-            sibling.style.display = 'block'
-            target.innerText = 'Hide'
+            if (window.getComputedStyle(nextSiblingElement).display === 'block') {
+                nextSiblingElement.style.display = 'none'
+                this.innerText = 'Show'
             }
+            else {
+                nextSiblingElement.style.display = 'block'
+                this.innerText = 'Hide'
+        }
             
+        
         
     })
     
