@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="./build/style.css">
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- CV Header Structure -->
+        <div class="cv-header">
+            <!-- Left side: Image and Name -->
+            <div class="profile-info">
+                <img src="images/profile.jpg" alt="Profile Picture">
+                <div class="name">Muhammad Talha</div>
+            </div>
+
+            <!-- Right side: Contact Information -->
+            <div class="contact-info">
+                <ul>
+                    <li><b>Email: <i>muhammadtalha0110@example.com</i></b></li>
+                    <li><b>Website: <i><a target="_blank" style="text-decoration: none; color: black;" href="https://github.com/Muhammadtalha678">https://github.com/Muhammadtalha678</a></i></b></li>
+                    <li><b>Contact: <i>+923 493 445479</i></b></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="main-section">
+            <!-- Profile Summary -->
+            <div class="section profile-summary">
+                <h2>
+                    Profile Summary
+                    <button class="toggle-btn hide-button"  >Hide</button>
+                </h2>
+                <div class="section-content">
+                    <p> I specialize in JavaScript, React, and full-stack
+                        development.</p>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section education">
+                <h2>
+                    Education
+                    <button class="toggle-btn hide-button"  >Hide</button>
+                </h2>
+                <div class="section-content">
+                    <p><strong>Bachelor of Science in Computer Science</strong><br>
+                        ABC University, 2015 - 2019</p>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section experience">
+                <h2>
+                    Experience
+                    <button class="toggle-btn hide-button"  >Hide</button>
+                </h2>
+                <div class="section-content">
+                    <p><strong>Front-End Developer</strong><br>
+                        ABC Company, 2019 - Present</p>
+                    <p>Worked on various front-end technologies including React, Angular, and Vue.js to create dynamic
+                        and responsive websites for clients.</p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section skills">
+                <h2>
+                    Skills
+                    <button class="toggle-btn hide-button"  >Hide</button>
+                </h2>
+                <div class="section-content">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Git</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./build/app.js">
+        // JavaScript function to toggle section content visibility
+    </script>
+
+</body>
+
+</html>
